@@ -22,6 +22,7 @@ export default function Sidebar() {
       href: '/notifications',
       icon: BsBellFill,
       auth: true,
+      alert: currentUser?.hasNotification,
     },
     {
       label: 'Profile',
@@ -43,6 +44,7 @@ export default function Sidebar() {
               label={item.label}
               icon={item.icon}
               auth={item.auth}
+              alert={item.alert}
             />
           ))}
           {currentUser && (
